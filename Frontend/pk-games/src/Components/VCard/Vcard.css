@@ -1,0 +1,39 @@
+.v_card-container{
+    width: 280px;
+    height: 450px;
+    background-color: #131313;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.v_card-container:hover{
+    box-shadow: 0 0 10px #d1d1d1;
+    transition: 0.3s ease-in-out;
+}
+
+.game-image{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.v_card-content{
+    width: 250px;
+    /* padding: 10px; */
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.price{
+    font-size: 18px;
+}

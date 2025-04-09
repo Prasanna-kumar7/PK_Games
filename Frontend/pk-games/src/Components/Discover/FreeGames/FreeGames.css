@@ -1,0 +1,56 @@
+.free_games{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.free_games-container{
+    display: flex;
+    flex-direction: column;
+    width: 1550px;
+    height: 560px;
+    background-color: #131313;
+    border-radius: 10px;
+}
+
+.free_games-wraper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.free_games-image{
+    width: 700px;
+    height: 360px;
+    border-radius: 10px;
+}
+
+.free_games-content{
+    width: 90%;
+}
+
+.free_games-title{
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.free_games-price{
+    font-size: 18px;
+}
+
+.free_games-head{
+    width: 80%;
+    margin-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.free_games-1, .free_games-2{
+    cursor: pointer;
+}

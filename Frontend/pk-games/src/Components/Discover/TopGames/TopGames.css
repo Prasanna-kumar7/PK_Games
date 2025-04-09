@@ -1,0 +1,33 @@
+*{
+    color: aliceblue;
+}
+
+.top_games-container{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top_games-head{
+    width: 80%;
+    text-align: left;
+}
+
+.top_games-container h1{
+    /* align-self: flex-start; */
+    /* margin-left: 170px; */
+    margin-bottom: 20px;
+}
+
+.top_games-wraper{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    
+}

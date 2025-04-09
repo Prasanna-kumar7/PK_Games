@@ -1,0 +1,41 @@
+.carousel-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.img{
+    width: 1500px;
+    height: 800px;
+}
+
+.button{
+    background-color: rgba(217, 217, 217, 0.7);
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.h1-text{
+    text-shadow: 0 0 10px black;
+}
+
+.carousel-caption{
+    text-align: end;
+}
+
+.carousel-indicators{
+    justify-content: flex-end;
+}

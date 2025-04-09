@@ -1,14 +1,16 @@
 import React from "react";
 import "./App.css";
-import assassinsCreedImage from "./images/assassins-creed-shadows.png";
 import games from "./Game-data";
-import ImageCarousel from "./Home/Discover/Carousel";
+import Home from "./Pages/Home/Home.jsx";
+import Nav from "./Components/Navbar/Nav.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
 
 const App = () => {
   return (
     <div>
-      <ImageCarousel />
-      <img src={assassinsCreedImage} alt="djdj" />
+      <Nav />
+      <Home />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,34 @@
+*{
+    color: aliceblue;
+}
+
+.deals-container{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.deals-head{
+    width: 80%;
+    text-align: left;
+}
+
+.deals-container h1{
+    /* align-self: flex-start; */
+    /* margin-left: 170px; */
+    margin-bottom: 20px;
+}
+
+.deals-wraper{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    
+}
