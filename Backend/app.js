@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const gamesRoute = require('./routes/games')
 const signupRoute = require('./routes/signup')
+const signinRoute = require("./routes/signin.js")
 const createConnection = require("./config/connection")
 
 // Environment variable configuration
@@ -26,6 +27,8 @@ createConnection()
 app.use("/user", signupRoute)
 // http://localhost:50000/user/signup
 
+app.use("/user", signinRoute)
+// http://localhost:50000/user/signin
 
 app.listen(port, ()=>{
   createConnection();

@@ -19,7 +19,7 @@ const Api = () => {
       });
   }, []);
 
-  const getTopGames = (count = 10) => {
+  const getTopGames = (count = 20) => {
     return games.slice(0, count);
   };
   const getDeals = (count = 6) => {

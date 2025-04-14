@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Subnav.css";
 
 const Subnav = () => {
@@ -17,8 +17,13 @@ const Subnav = () => {
           <input type="search" className="search" placeholder="Search Store" />
         </div>
         <div className="sub_nav-links">
-          <Link className="sub_nav-link">Discover</Link>
-          <Link className="sub_nav-link">Browse</Link>
+          {/* in end "NavLink" turns to "a" tag */}
+          <NavLink to="" end className="sub_nav-link">
+            Discover
+          </NavLink>
+          <NavLink to="browse" className="sub_nav-link">
+            Browse
+          </NavLink>
         </div>
       </div>
     </div>

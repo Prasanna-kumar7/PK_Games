@@ -1,0 +1,46 @@
+.genres{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.genres_head{
+    width: 80%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.genres_wraper{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.genres_card{
+    width: 520px;
+    height: 370px;
+    background-color: #131313;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.genres_title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.genres_image{
+    width: 480px;
+    height: 285px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

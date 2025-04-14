@@ -11,7 +11,7 @@
 .footer_text{
     width: 55%;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-left: 50px;
     color: #AFAFAF;
 }
@@ -23,12 +23,16 @@
 .footer_button{
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 50px;
     width: 158px;
     height: 46px;
     color: #000;
     font-size: 20px;
     font-weight: bold;
+}
+
+.footer_button:hover{
+    transform: scale(0.95);
 }
 
 .footer_links{

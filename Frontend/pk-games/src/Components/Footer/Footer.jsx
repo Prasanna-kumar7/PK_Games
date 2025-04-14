@@ -27,7 +27,9 @@ const Footer = () => {
           <img src={yt} alt="YouTube" className="footer_image" />
         </a>
       </div>
-      <button className="footer_button">Back To Top</button>
+      <a href="#">
+        <button className="footer_button">Back To Top</button>
+      </a>
     </footer>
   );
 };

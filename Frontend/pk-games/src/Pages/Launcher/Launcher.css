@@ -1,0 +1,48 @@
+.launcher_container{
+    width: 100%;
+    height: auto;
+    padding: 150px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.launcher_wraper{
+    width: 100%;
+    height: auto;
+}
+
+.launcher_head, .launcher_title{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.launcher_image-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+
+.launcher_image{
+    width: 400px;
+    height: 400px;
+}
+
+.launcher_text{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.launcher_button{
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: #d9d9d9;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}

@@ -66,3 +66,7 @@
 .sub_nav-link:hover{
     color: #D7D7D7;
 }
+
+.sub_nav-links a.active{
+    color: #fff;
+}

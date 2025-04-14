@@ -1,0 +1,79 @@
+.wishlist_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 150px 0px;
+}
+
+.wishlist_head{
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+.wishlist_games-wraper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wishlist_games-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 520px;
+    height: 390px;
+    background-color: #131313;
+    border-radius: 10px;
+    position: relative;
+}
+
+.wishlist_games-image{
+    width: 480px;
+    height: 290px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.wishlist_games-content{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wishlist_games-title, .wishlist_games-price{
+    margin-bottom: 0px;
+}
+
+.wishlist_games-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wishlist_games-price{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.wishlist_games-button{
+    width: 140px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(188, 188, 188, 0.70);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wishlist_game-heart{
+    position: absolute;
+    top: 25px;
+    right: 35px;
+}
