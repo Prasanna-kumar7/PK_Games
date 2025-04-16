@@ -14,9 +14,12 @@ import Signup from "./Pages/User/Signup.jsx";
 import Wishlist from "./Pages/Wishlist/Wishlist.jsx";
 import Launcher from "./Pages/Launcher/Launcher.jsx";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
+import Error from "./Pages/Error/Error.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
 
 const App = () => {
   const [wishlist, setWishlist] = useState([]);
+  const [cart, setCart] = useState([]);
   return (
     <div>
       <ScrollToTop />
@@ -38,9 +41,18 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route
           path="/wishlist"
-          element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} />}
+          element={
+            <Wishlist
+              wishlist={wishlist}
+              setWishlist={setWishlist}
+              cart={cart}
+              setCart={setCart}
+            />
+          }
         />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/launcher" element={<Launcher />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </div>

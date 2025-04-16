@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <nav className="nav-container flex">
       <div className="nav-logo">
-        <a href="#">
+        <a href="/">
           <img src={logo} alt="PK-Games-Logo" />
         </a>
       </div>
@@ -36,10 +36,12 @@ const Nav = () => {
             style={{ color: "#ffffff", fontSize: "25px", cursor: "pointer" }}
           />
         </NavLink>
-        <FontAwesomeIcon
-          icon={faCartShopping}
-          style={{ color: "#ffffff", fontSize: "25px", cursor: "pointer" }}
-        />
+        <NavLink to="/cart">
+          <FontAwesomeIcon
+            icon={faCartShopping}
+            style={{ color: "#ffffff", fontSize: "25px", cursor: "pointer" }}
+          />
+        </NavLink>
         <button
           onClick={() => {
             navigate("/signin");

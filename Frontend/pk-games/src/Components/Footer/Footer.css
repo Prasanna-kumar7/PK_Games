@@ -29,6 +29,7 @@
     color: #000;
     font-size: 20px;
     font-weight: bold;
+    background-color: rgba(141, 137, 137, 0.7);
 }
 
 .footer_button:hover{
