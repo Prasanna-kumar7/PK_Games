@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    font-family: "Roboto", sans-serif;
 }
 body{
     background-color: #191919;
