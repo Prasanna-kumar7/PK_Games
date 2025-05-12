@@ -16,6 +16,7 @@ import Launcher from "./Pages/Launcher/Launcher.jsx";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
 import Error from "./Pages/Error/Error.jsx";
 import Cart from "./Pages/Cart/Cart.jsx";
+import GameDetails from "./Components/GameDetails/GameDetails.jsx";
 
 const App = () => {
   const [wishlist, setWishlist] = useState([]);
@@ -52,6 +53,7 @@ const App = () => {
         />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/launcher" element={<Launcher />} />
+        <Route path="/gamedetails" element={<GameDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

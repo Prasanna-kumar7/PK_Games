@@ -4,8 +4,10 @@ import img1 from "../../../images/Assassins-creed-shadows-big1.png";
 import img2 from "../../../images/Spider-Man-2-Big2.jpg";
 import img3 from "../../../images/split-fiction-big3.jpg";
 import "./Carousel.css";
+import { useNavigate } from "react-router-dom";
 
 const ImageCarousel = () => {
+  const navigate = useNavigate();
   return (
     <div className="carousel-container">
       <Carousel className="img">
@@ -13,7 +15,12 @@ const ImageCarousel = () => {
           <img className="img" src={img1} alt="Assassins-creed-shadows" />
           <Carousel.Caption>
             <h1 className="h1-text">Assassins Creed Shadows</h1>
-            <button className="button">
+            <button
+              className="button"
+              onClick={() => {
+                navigate("/gamedetails");
+              }}
+            >
               <a href="#">Open</a>
             </button>
           </Carousel.Caption>
