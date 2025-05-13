@@ -1,46 +1,106 @@
-.genres{
+.genres {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  /* justify-content: center; */
+}
+
+.genres_head {
+  width: 80%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.genres_wraper {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.genres_card {
+  width: 520px;
+  height: 370px;
+  background-color: #131313;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.genres_card a {
+  text-decoration: none;
+}
+
+.genres_title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.genres_image {
+  width: 480px;
+  height: 285px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* tablets: 3 → 2 columns */
+@media (max-width: 1440px) {
+  .genres_wraper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1024px and below: 2 columns with smaller cards/images */
+@media (max-width: 1024px) {
+  .genres_wraper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .genres_card {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .genres_image {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
+  }
+
+  .genres_title {
+    font-size: 18px;
+  }
 }
-.genres_head{
-    width: 80%;
-    text-align: left;
-    margin-bottom: 50px;
-}
-.genres_wraper{
-    width: auto;
+
+/* phones: single column */
+@media (max-width: 767px) {
+  .genres_wraper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .genres_card {
+    width: 100%;
+  }
+
+  .genres_image {
+    width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-}
+  }
 
-.genres_card{
-    width: 520px;
-    height: 370px;
-    background-color: #131313;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.genres_title{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin: 5px 0;
-}
-
-.genres_image{
-    width: 480px;
-    height: 285px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  .genres_title {
+    font-size: 16px;
+  }
 }

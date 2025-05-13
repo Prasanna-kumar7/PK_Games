@@ -1,54 +1,100 @@
-.v_card-container{
-    width: 280px;
-    height: 450px;
-    background-color: #131313;
-    /* background-color: aquamarine; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
+/* VCard.css */
+
+/* Card container */
+.v_card-container {
+  width: 280px;
+  height: 450px;
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.v_card-container:hover{
-    box-shadow: 0 0 10px #d1d1d1;
-    transition: 0.3s ease-in-out;
+.v_card-container:hover {
+  box-shadow: 0 0 10px #d1d1d1;
 }
 
-.game-image{
-    width: 250px;
-    height: 350px;
-    border-radius: 10px;
-}
-
-.v_card-content{
-    width: 250px;
-    /* padding: 10px; */
-}
-
-.title{
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin: 5px 0;
-}
-
-.price{
-    font-size: 18px;
-}
-
-/* In VCard.css */
+/* Wishlist icon */
 .wishlist-icon {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    cursor: pointer;
-    font-size: 25px;
-    z-index: 5;
-    background-color: #131313;
-    padding: 5px 5px;
-    border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 25px;
+  z-index: 5;
+  background-color: #131313;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Game image */
+.game-image {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Content area */
+.v_card-content {
+  width: 250px;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 18px;
+}
+
+/* ===== Responsive ===== */
+
+/* shrink cards to ~45% width on tablets ≤767px */
+@media (max-width: 767px) {
+  .v_card-container {
+    width: 45%;
+    height: auto;
+    margin: 0 auto 20px;
   }
-  
+  .game-image {
+    width: 100%;
+    height: auto;
+  }
+  .title {
+    font-size: 16px;   /* reduced from 18px */
+  }
+  .price {
+    font-size: 16px;
+  }
+}
+
+/* full-width cards on phones <600px */
+@media (max-width: 599px) {
+  .v_card-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+  }
+  .game-image {
+    width: 100%;
+    height: auto;
+  }
+  .title {
+    font-size: 14px;   /* further reduced */
+    text-align: center;
+  }
+  .price {
+    font-size: 14px;
+    text-align: center;
+  }
+}

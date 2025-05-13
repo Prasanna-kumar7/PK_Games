@@ -21,7 +21,7 @@ const ImageCarousel = () => {
                 navigate("/gamedetails");
               }}
             >
-              <a href="#">Open</a>
+              Open
             </button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -29,8 +29,13 @@ const ImageCarousel = () => {
           <img className="img" src={img2} alt="Spider-Man-2" />
           <Carousel.Caption>
             <h1 className="h1-text">Spider Man 2</h1>
-            <button className="button">
-              <a href="#">Open</a>
+            <button
+              className="button"
+              onClick={() => {
+                navigate("/gamedetails");
+              }}
+            >
+              Open
             </button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -38,8 +43,13 @@ const ImageCarousel = () => {
           <img className="img" src={img3} alt="split-fiction" />
           <Carousel.Caption>
             <h1 className="h1-text">Split Fiction</h1>
-            <button className="button">
-              <a href="#">Open</a>
+            <button
+              className="button"
+              onClick={() => {
+                navigate("/gamedetails");
+              }}
+            >
+              Open
             </button>
           </Carousel.Caption>
         </Carousel.Item>

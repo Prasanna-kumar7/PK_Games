@@ -1,7 +1,9 @@
 import React from "react";
 import "../FreeGames/FreeGames.css";
+import { useNavigate } from "react-router-dom";
 
 const FreeGames = () => {
+  const navigate = useNavigate();
   return (
     <div className="free_games">
       <div className="free_games-container">
@@ -9,7 +11,12 @@ const FreeGames = () => {
           <h1>Free Games</h1>
         </div>
         <div className="free_games-wraper">
-          <div className="free_games-1">
+          <div
+            className="free_games-1"
+            onClick={() => {
+              navigate("/gamedetails");
+            }}
+          >
             <img
               src="https://i.ibb.co/F4KD7mfc/Assassins-creed-shadows-big3.png"
               alt=""
@@ -23,7 +30,12 @@ const FreeGames = () => {
               </div>
             </div>
           </div>
-          <div className="free_games-2">
+          <div
+            className="free_games-2"
+            onClick={() => {
+              navigate("/gamedetails");
+            }}
+          >
             <img
               src="https://i.ibb.co/Ng5gcSQt/GTA5-big1.jpg"
               alt=""

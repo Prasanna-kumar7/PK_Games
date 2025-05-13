@@ -1,79 +1,138 @@
-.signin_form{
+.signin_form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 0;
+}
+
+.signin_container {
+  width: 1400px;
+  height: 700px;
+  background-color: #131313;
+  display: flex;
+  align-items: center;
+}
+
+.signin_container-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin_wraper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin_head {
+  height: 10%;
+}
+
+.signin_input {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signin_input input {
+  width: 500px;
+  height: 50px;
+  background-color: rgba(132, 132, 132, 0.20);
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.signin_input button {
+  width: 500px;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #848484;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.signin_create-account {
+  text-align: center;
+}
+
+.signin_create-account-text {
+  color: rgba(211, 211, 211, 0.7);
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+.signin_create-account-link {
+  text-decoration: underline;
+}
+
+/* phones & small tablets: full‐width inputs */
+@media (max-width: 767px) {
+  .signin_wraper input,
+  .signin_wraper button {
     width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 150px 0;
-}
-
-.signin_container{
-    width: 1400px;
-    height: 700px;
-    background-color: #131313;
-    display: flex;
-    align-items: center;
-}
-
-.signin_container-image{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.signin_wraper{
-    width: 50%;
-    height: 100%;
-    display: flex;
+  }
+  .signin_container {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.signin_head{
-    height: 10%;
+    padding: 20px 10px;
+  }
 }
 
-.signin_input{
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-}
+/* For devices 1024px and below */
+@media (max-width: 1024px) {
+  .signin_container {
+    width: 100%; /* Adjust container width */
+    height: auto; /* Allow flexibility in height */
+    padding: 20px; /* Add padding for small screens */
+  }
 
-.signin_input input{
-    width: 500px;
-    height: 50px;
-    background-color: rgba(132, 132, 132, 0.20);
-    border: 1px solid #DBDBDB;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 0 30px;
-}
+  .signin_container-image {
+    width: 70%; /* Reduce image width for smaller screens */
+    margin-bottom: 20px; /* Space between image and form */
+  }
 
-.signin_input button{
-    width: 500px;
-    height: 50px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: #848484;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
+  .signin_container-image img {
+    width: 80%; /* Scale image to fit within its container */
+    height: auto; /* Maintain aspect ratio */
+  }
 
-.signin_create-account{
-    text-align: center;
-}
+  .signin_wraper {
+    width: 100%; /* Ensure the form wrapper takes full width */
+    margin-top: 10px; /* Add space on top */
+  }
 
-.signin_create-account-text{
-    color: rgba(211, 211, 211, 0.7);
-    margin-bottom: 0px;
-    font-weight: 500;
-}
+  .signin_input input {
+    width: 100%; /* Full width for input fields */
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
 
-.signin_create-account-link{
-    text-decoration: underline;
+  .signin_input button {
+    width: 100%; /* Full width for button */
+    font-size: 18px; /* Reduce font size for better fit */
+    padding: 10px; /* Adjust padding to fit smaller screens */
+  }
+
+  .signin_head {
+    font-size: 26px; /* Slightly reduce the header font size */
+  }
+
+  .signin_create-account-text {
+    font-size: 14px; /* Reduce text size */
+  }
+
+  .signin_create-account-link {
+    font-size: 16px; /* Adjust link size */
+  }
 }

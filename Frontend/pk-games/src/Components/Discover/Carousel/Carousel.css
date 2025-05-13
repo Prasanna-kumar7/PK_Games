@@ -1,41 +1,116 @@
-.carousel-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+/* Carousel.css */
+
+/* Container centers carousel */
+.carousel-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
-.img{
-    width: 1500px;
-    height: 800px;
+/* Make the carousel image fluid */
+.img {
+  width: 100%;
+  max-width: 1500px; /* original “full” size */
+  height: auto;
+  object-fit: cover;
 }
 
-.button{
-    background-color: rgba(217, 217, 217, 0.7);
-    width: 100px;
-    height: 40px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+/* Caption button */
+.button {
+  background-color: rgba(217, 217, 217, 0.7);
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-a{
-    text-decoration: none;
-    color: #000;
+/* Headline text */
+.h1-text {
+  text-shadow: 0 0 10px black;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.h1-text{
-    text-shadow: 0 0 10px black;
+/* Caption alignment */
+.carousel-caption {
+  text-align: end;
 }
 
-.carousel-caption{
-    text-align: end;
+/* Indicators alignment */
+.carousel-indicators {
+  justify-content: flex-end;
 }
 
-.carousel-indicators{
-    justify-content: flex-end;
+/* ---------------------------------- */
+/* Responsive Breakpoints             */
+/* ---------------------------------- */
+
+/* ≤1599px: ensure fluid image, shrink h1 slightly */
+@media (max-width: 1599px) {
+  .h1-text {
+    font-size: 2.8rem;
+  }
+  .button {
+    width: 90px;
+    height: 36px;
+    font-size: 15px;
+  }
+}
+
+/* ≤1199px: stack caption center & shrink more */
+@media (max-width: 1199px) {
+  .carousel-caption {
+    text-align: center;
+  }
+  .h1-text {
+    font-size: 2.4rem;
+  }
+  .button {
+    width: 80px;
+    height: 34px;
+    font-size: 14px;
+  }
+}
+
+/* ≤767px: mobile view – smaller text, full-width button */
+@media (max-width: 767px) {
+  .h1-text {
+    font-size: 2rem;
+  }
+  .button {
+    width: 70px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+/* ≤599px: tighten for small phones */
+@media (max-width: 599px) {
+  .h1-text {
+    font-size: 1.6rem;
+  }
+  .button {
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+/* ≤425px: smallest phones */
+@media (max-width: 425px) {
+  .h1-text {
+    font-size: 1.4rem;
+  }
+  .button {
+    width: 55px;
+    height: 28px;
+    font-size: 11px;
+  }
 }

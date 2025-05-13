@@ -1,75 +1,170 @@
-.featured{
+.featured {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.featured_container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.featured_head {
+  padding: 20px 0 30px;
+}
+
+.featured_head h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Cards row */
+.featured_wraper {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Single card */
+.featured_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 520px;
+  height: 400px;
+  background-color: #131313;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.featured_image {
+  width: 450px;
+  height: 270px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.featured_content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  /* text-align: center; */
+  margin-top: 15px;
+}
+
+.featured_title {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.featured_content button {
+  width: 120px;
+  height: 45px;
+  border: none;
+  background-color: rgba(141, 137, 137, 0.7);
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ≤1440px: use 2 cards per row */
+@media (max-width: 1440px) {
+  .featured_wraper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .featured_card {
+    width: 480px;
+    height: auto;
+  }
+  .featured_image {
+    width: 420px;
+    height: auto;
+  }
+  .featured_title {
+    font-size: 24px;
+  }
+}
+
+/* 1199px ↓: stack vertically */
+@media (max-width: 1199px) {
+  .featured_wraper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .featured_head h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* 767px ↓: shrink container & fonts */
+@media (max-width: 767px) {
+  .featured_container {
+    width: 90%;
+  }
+  .featured_head h1 {
+    font-size: 2rem;
+  }
+  .featured_card {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    padding: 15px;
+  }
+  .featured_title {
+    font-size: 22px;
+  }
+  .featured_content button {
+    font-size: 18px;
+  }
 }
 
-.featured_head{
-    /* width: 80%; */
-    /* margin-left: 40px; */
-    padding-bottom: 30px;
-    padding-top: 20px;
-}
-
-.featured_container{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-evenly; */
-    /* align-items: center; */
-    width: 80%;
+/* 599px ↓: full-width images & buttons */
+@media (max-width: 599px) {
+  .featured_image {
+    width: 100%;
     height: auto;
+  }
+  .featured_content button {
+    width: 100%;
+  }
+  .featured_head h1 {
+    font-size: 1.8rem;
+  }
 }
 
-.featured_wraper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    /* width: 100%; */
-}
-
-.featured_card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 520px;
-    height: 400px;
-    background-color: #131313;
-    border-radius: 10px;
-}
-
-.featured_image{
-    width: 450px;
-    height: 270px;
-    border-radius: 10px;
-}
-
-.featured_content{
-    width: 90%;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: flex-start; */
-}
-
-.featured_content button{
-    width: 120px;
-    height: 45px;
-    border: none;
-    outline: none;
-    background-color: rgba(141, 137, 137, 0.7);
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.featured_title{
-    font-size: 26px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin: 5px 0;
+/* 425px ↓: tighten everything for tiny screens */
+@media (max-width: 425px) {
+  .featured_container {
+    width: 95%;
+  }
+  .featured_wraper {
+    gap: 15px;
+  }
+  .featured_head h1 {
+    font-size: 1.6rem;
+  }
+  .featured_card {
+    padding: 10px;
+  }
+  .featured_image {
+    border-radius: 8px;
+  }
+  .featured_title {
+    font-size: 18px;
+  }
+  .featured_content button {
+    font-size: 16px;
+    height: 40px;
+    width: 100px;
+  }
 }

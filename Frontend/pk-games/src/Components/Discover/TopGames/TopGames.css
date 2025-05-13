@@ -1,33 +1,73 @@
-*{
-    color: aliceblue;
+/* TopGames.css */
+
+/* Reset text color */
+* {
+  color: aliceblue;
 }
 
-.top_games-container{
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: start; */
-    align-items: center;
-    margin-bottom: 50px;
+/* Container */
+.top_games-container {
+  width: 100%;
+  margin: 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.top_games-head{
-    width: 80%;
-    text-align: left;
+/* Header */
+.top_games-head {
+  width: 80%;
+  text-align: left;
+}
+.top_games-head h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
-.top_games-container h1{
-    /* align-self: flex-start; */
-    /* margin-left: 170px; */
-    margin-bottom: 20px;
+/* Grid wrapper */
+.top_games-wraper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
 }
 
-.top_games-wraper{
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 25px;
-    
+/* 5 → 4 columns on large desktops */
+@media (max-width: 1599px) {
+  .top_games-wraper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 4 → 3 columns on tablets ≤1199px */
+@media (max-width: 1199px) {
+  .top_games-wraper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .top_games-head h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* 3 → 2 columns on small tablets ≤767px */
+@media (max-width: 768px) {
+  .top_games-wraper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .top_games-head h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 2 → 1 column on phones <600px */
+@media (max-width: 599px) {
+  .top_games-wraper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .top_games-head h1 {
+    font-size: 1.8rem;
+  }
 }

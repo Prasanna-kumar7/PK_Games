@@ -46,3 +46,15 @@
     font-weight: bold;
     color: #000;
 }
+
+/* phones: center & pad */
+@media (max-width: 599px) {
+  .launcher_container {
+    padding: 80px 10px;
+  }
+  .launcher_image {
+    width: 70%;
+    height: auto;
+    margin-left: 60px;
+  }
+}

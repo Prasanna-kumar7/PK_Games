@@ -1,8 +1,10 @@
 import React from "react";
 import "./Wishlist.css";
 import { FaHeart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Wishlist = ({ wishlist, setWishlist, cart, setCart }) => {
+  const navigate = useNavigate();
   const toggleWishlist = (gameToRemove) => {
     const updatedWishlist = wishlist.filter(
       (game) => game.gameName !== gameToRemove.gameName
@@ -47,9 +49,17 @@ const Wishlist = ({ wishlist, setWishlist, cart, setCart }) => {
                     src={game.imageURL}
                     alt={game.gameName}
                     className="wishlist_games-image"
+                    onClick={() => {
+                      navigate("/gamedetails");
+                    }}
                   />
                   <div className="wishlist_games-content">
-                    <div className="wishlist_games-text">
+                    <div
+                      className="wishlist_games-text"
+                      onClick={() => {
+                        navigate("/gamedetails");
+                      }}
+                    >
                       <p className="wishlist_games-title">{game.gameName}</p>
                       <p className="wishlist_games-price">₹{game.price}</p>
                     </div>

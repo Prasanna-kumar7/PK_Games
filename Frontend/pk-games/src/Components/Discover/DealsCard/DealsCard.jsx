@@ -1,10 +1,17 @@
 import React from "react";
 import "../DealsCard/DealsCard.css";
+import { useNavigate } from "react-router-dom";
 
 const DealsCard = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="deals_card-container">
+      <div
+        className="deals_card-container"
+        onClick={() => {
+          navigate("/gamedetails");
+        }}
+      >
         <img
           src="https://i.ibb.co/5XMHPKrz/Spider-Man-2-Big3.jpg"
           alt=""
@@ -20,7 +27,12 @@ const DealsCard = () => {
           </div>
         </div>
       </div>
-      <div className="deals_card-container">
+      <div
+        className="deals_card-container"
+        onClick={() => {
+          navigate("/gamedetails");
+        }}
+      >
         <img
           src="https://i.ibb.co/HTT4tBsc/split-fiction-big2.jpg"
           alt=""
@@ -36,7 +48,12 @@ const DealsCard = () => {
           </div>
         </div>
       </div>
-      <div className="deals_card-container">
+      <div
+        className="deals_card-container"
+        onClick={() => {
+          navigate("/gamedetails");
+        }}
+      >
         <img
           src="https://i.ibb.co/W4d9ftX7/GTA5-big2.jpg"
           alt=""
@@ -52,7 +69,12 @@ const DealsCard = () => {
           </div>
         </div>
       </div>
-      <div className="deals_card-container">
+      <div
+        className="deals_card-container"
+        onClick={() => {
+          navigate("/gamedetails");
+        }}
+      >
         <img
           src="https://i.ibb.co/k2hsFd5W/farming-simulator-25-Big1.jpg"
           alt=""
@@ -68,7 +90,12 @@ const DealsCard = () => {
           </div>
         </div>
       </div>
-      <div className="deals_card-container">
+      <div
+        className="deals_card-container"
+        onClick={() => {
+          navigate("/gamedetails");
+        }}
+      >
         <img
           src="https://i.ibb.co/hx5YCb1S/Assassins-creed-shadows-big2.png"
           alt=""
@@ -84,7 +111,12 @@ const DealsCard = () => {
           </div>
         </div>
       </div>
-      <div className="deals_card-container">
+      <div
+        className="deals_card-container"
+        onClick={() => {
+          navigate("/gamedetails");
+        }}
+      >
         <img
           src="https://i.ibb.co/67gKKqnR/Spider-Man-2-Big1.jpg"
           alt=""

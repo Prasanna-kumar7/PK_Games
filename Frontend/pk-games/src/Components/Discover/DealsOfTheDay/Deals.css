@@ -1,34 +1,91 @@
-*{
-    color: aliceblue;
+* {
+  color: aliceblue;
 }
 
-.deals-container{
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: start; */
-    align-items: center;
-    margin-bottom: 50px;
+.deals-container {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.deals-head{
-    width: 80%;
-    text-align: left;
+.deals-head {
+  width: 80%;
+  text-align: left;
 }
 
-.deals-container h1{
-    /* align-self: flex-start; */
-    /* margin-left: 170px; */
-    margin-bottom: 20px;
+.deals-head h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
-.deals-wraper{
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 25px;
-    
+.deals-wraper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ≤1599px: 3 → 2 columns */
+@media (max-width: 1599px) {
+  .deals-wraper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≤1199px: 2 → 1 column */
+@media (max-width: 1199px) {
+  .deals-wraper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .deals-head h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ✅ NEW: ≤1024px (2 columns, tighter layout) */
+@media (max-width: 1024px) {
+  .deals-wraper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .deals-head h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ≤767px: tighter padding & gap */
+@media (max-width: 767px) {
+  .deals-wraper {
+    padding: 0 10px;
+    gap: 15px;
+  }
+  .deals-head h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ≤599px: smaller fonts */
+@media (max-width: 599px) {
+  .deals-wraper {
+    padding: 0 5px;
+    gap: 12px;
+  }
+  .deals-head h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ≤425px: ensure no overflow on tiny screens */
+@media (max-width: 425px) {
+  .deals-wraper {
+    padding: 0 2px;
+    gap: 8px;
+  }
+  .deals-head h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
 }

@@ -1,96 +1,186 @@
-.signup_form{
+.signup_form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.signup_container {
+  width: 1600px;
+  height: 820px;
+  background-color: #131313;
+  display: flex;
+  align-items: center;
+}
+
+.signup_container-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_container-image img {
+  width: 80%;
+  height: auto;
+}
+
+.signup_wraper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_head {
+  height: 10%;
+}
+
+.signup_input {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup_input input {
+  width: 600px;
+  height: 50px;
+  background-color: rgba(132, 132, 132, 0.2);
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.password_wraper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.password_wraper input {
+  width: 280px;
+}
+
+.password,
+.confirm_password {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup_input button {
+  width: 600px;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #848484;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.signin_account {
+  text-align: center;
+}
+
+.signin_text {
+  color: rgba(211, 211, 211, 0.7);
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+.signin_link {
+  text-decoration: underline;
+}
+
+/* 🔽 Phones & small tablets */
+@media (max-width: 767px) {
+  .signup_input input,
+  .signup_input button {
+    width: 100%;
+  }
+
+  .signup_container {
+    flex-direction: column;
+    padding: 20px 10px;
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 0;
-}
+  }
 
-.signup_container{
-    width: 1600px;
-    height: 820px;
-    background-color: #131313;
-    display: flex;
-    align-items: center;
-}
-
-.signup_container-image{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.signup_wraper{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.signup_head{
-    height: 10%;
-}
-
-.signup_input{
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-}
-
-
-.signup_input input{
-    width: 600px;
-    height: 50px;
-    background-color: rgba(132, 132, 132, 0.20);
-    border: 1px solid #DBDBDB;
-    border-radius: 5px;
+  .signup_container-image {
+    width: 70%;
     margin-bottom: 20px;
-    padding: 0 30px;
-}
+  }
 
-.password_wraper{
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    justify-content: space-between;
-}
+  .signup_container-image img {
+    width: 100%;
+    height: auto;
+  }
 
-.password_wraper input{
-    width: 280px;
-}
+  .signup_wraper {
+    width: 100%;
+  }
 
-.password, .confirm_password{
-    display: flex;
+  .password_wraper {
     flex-direction: column;
+    gap: 0;
+  }
+
+  .password_wraper input {
+    width: 100%;
+  }
+
+  .signup_input input,
+  .signup_input button {
+    width: 100%;
+  }
+
+  .signup_head {
+    font-size: 24px;
+  }
 }
 
-.signup_input button{
-    width: 600px;
-    height: 50px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: #848484;
-    border: none;
-    border-radius: 5px;
+/* 🔽 Medium devices like tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .signup_container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .signup_container-image {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  .signup_container-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .signup_wraper {
+    width: 100%;
     margin-top: 10px;
-}
+  }
 
-.signin_account{
-    text-align: center;
-}
+  .signup_input input,
+  .signup_input button {
+    width: 100%;
+  }
 
-.signin_text{
-    color: rgba(211, 211, 211, 0.7);
-    margin-bottom: 0px;
-    font-weight: 500;
-}
+  .password_wraper {
+    flex-direction: column;
+    gap: 0;
+  }
 
-.signin_link{
-    text-decoration: underline;
+  .password_wraper input {
+    width: 100%;
+  }
 }
