@@ -1,7 +1,9 @@
 import React from "react";
 import "./Cart.css"; // style as needed
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
+  const navigate = useNavigate();
   const removeFromCart = (gameToRemove) => {
     setCart(cart.filter((game) => game.gameName !== gameToRemove.gameName));
   };
@@ -63,7 +65,13 @@ const Cart = ({ cart, setCart }) => {
                   <input type="number" placeholder="CVV" />
                 </div>
               </div>
-              <button>Place Order</button>
+              <button
+                onClick={() => {
+                  navigate("/error");
+                }}
+              >
+                Place Order
+              </button>
             </div>
           </section>
         </aside>

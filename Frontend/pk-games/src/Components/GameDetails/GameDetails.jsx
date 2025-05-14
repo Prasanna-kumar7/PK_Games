@@ -2,8 +2,10 @@ import React from "react";
 import "./GameDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const GameDetails = () => {
+  const navigate = useNavigate();
   return (
     <div className="game_details-container">
       <div className="game_details-container-wraper">
@@ -159,7 +161,14 @@ const GameDetails = () => {
               <p>Platform</p>
               <p>Windows</p>
             </div>
-            <button className="game_details-buynow">Buy Now</button>
+            <button
+              className="game_details-buynow"
+              onClick={() => {
+                navigate("/error");
+              }}
+            >
+              Buy Now
+            </button>
           </div>
         </div>
       </div>
